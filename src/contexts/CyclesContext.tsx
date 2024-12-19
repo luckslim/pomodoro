@@ -29,19 +29,19 @@ export function CyclesContextProvider({ children, }:CyclesContextProviderProps) 
     {
         cycles:[],
         activeCycleId: null,
-    }, ()=>{
-        const storedStateAsJSON = localStorage.getItem('@ignite-timer:cycles-state')
-        if(storedStateAsJSON){
-            return JSON.parse(storedStateAsJSON)
-        }
+    // }, ()=>{
+    //     const storedStateAsJSON = localStorage.getItem('@ignite-timer:cycles-state')
+    //     if(storedStateAsJSON){
+    //         return JSON.parse(storedStateAsJSON)
+    //     }
     })
 
     const [amountSecondsPassed, setAmountSecondsPassed] = useState(0);
 
-    useEffect(()=>{
-        const stateJSON = JSON.stringify(CyclesState)
-        localStorage.setItem('@ignite-timer:cycles-state',stateJSON)
-    },[CyclesState])
+    // useEffect(()=>{
+    //     const stateJSON = JSON.stringify(CyclesState)
+    //     localStorage.setItem('@ignite-timer:cycles-state',stateJSON)
+    // },[CyclesState])
 
     const {cycles, activeCycleId}= CyclesState;
 
